@@ -210,7 +210,7 @@ public class Filosofo extends Thread{
 		}
 	}
 	
-	public void AindaPodeJantar () {
+	public void aindaPodeJantar () {
 		if (this.getJantando() == 50) {
 			this.setAindaJanta(false);
 		}
@@ -252,6 +252,7 @@ public class Filosofo extends Thread{
 				 }
 			} else {
 				System.out.println(this.getNome() + " NAO PODE MAIS JANTAR!!!");
+				System.out.println(">>>> " + this.getNome() + " ESTA PENSANDO!!! <<<<");
 			}
 			
 			try {
@@ -268,6 +269,8 @@ public class Filosofo extends Thread{
 					this.soltarGarfoMaoEsquerda();
 				}
 			}
+			
+			this.aindaPodeJantar();
 			
 			System.out.println(" ");
 		}
